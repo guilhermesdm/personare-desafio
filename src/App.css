@@ -1,4 +1,10 @@
 .App {
-    display: flex;
+    display: center;
+    text-align: center;
     
+}
+
+.card {
+    list-style-type: none;
+    display: flex;
 }
