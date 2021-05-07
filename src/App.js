@@ -19,12 +19,21 @@ function App() {
   return (
     <div className="App">
         <h1> Personare </h1>
+
+        <div className="botoes">
+
           <button onClick={() => shuffle(cartas)}> Embaralhar </button>
           <button onClick={() => setViradas(!viradas)}> Virar </button>
           
+        </div>
+
           <div className="card">
             {cartas.map(card => (
-              <li onClick={() => swal(card.name) } key={ card.image }> <img src= { !viradas ? back : `${ baseUrl }/${ card.image }`} alt="card" className="middle"/></li>
+              <li onClick={() => swal({ 
+                title: card.name,
+                icon: 'https://dkw5ssdvaqf8l.cloudfront.net/static/psr/br/framework/yii/images/content/pt-br/product/tarot/marselha/162x341/' + card.image,
+                text: "lorem borga",
+               })} key={ card.image }> <img src= { !viradas ? back : `${ baseUrl }/${ card.image }`} alt="card"/></li>
               ))}
           </div>
 
