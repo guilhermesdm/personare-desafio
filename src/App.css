@@ -7,4 +7,5 @@
 .card {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
 }
